@@ -1,0 +1,28 @@
+# Structural fingerprints for similarity screening.
+#
+# Each fingerprint encodes a known sentence-rhythm pattern (as a syllable-count
+# sequence) that is associated with a specific identifiable writer's signature
+# cadence. Generated output with cosine similarity >= 0.85 against any of these
+# patterns is flagged for rewrite.
+#
+# This file is populated during confusability testing (Sprint 5). It starts
+# sparse — the screening module must handle a minimal list without error.
+#
+# Format:
+#   fingerprints:
+#     - pattern_name: "descriptive name (no writer name)"
+#       syllable_sequence: [3, 2, 4, 1, 3, 5, 2]   # representative sentence syllable counts
+#       description: "brief description of the cadence"
+
+fingerprints:
+  - pattern_name: "short_declarative_opening"
+    syllable_sequence: [3, 1, 2, 4, 2, 3, 1, 2]
+    description: "Short declarative sentences with abrupt 1-2 syllable pivots"
+
+  - pattern_name: "long_periodic_sentence"
+    syllable_sequence: [4, 3, 5, 2, 4, 6, 3, 4, 2, 5]
+    description: "Extended periodic sentence building to a climactic final clause"
+
+  - pattern_name: "epigrammatic_triplet"
+    syllable_sequence: [2, 3, 2, 4, 1, 3]
+    description: "Three-part epigrammatic structure with compressed syllable rhythm"

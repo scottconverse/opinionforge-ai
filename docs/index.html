@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpinionForge — Editorial Craft Engine</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fafaf8;
+    }
+    header {
+      background: #1a1a1a;
+      color: #f5f5f0;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    header .tagline {
+      font-size: 1.2rem;
+      color: #aaa;
+      font-style: italic;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    section {
+      margin: 3rem 0;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    p { margin-bottom: 1rem; }
+    ul { margin: 0.5rem 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    code {
+      font-family: 'Courier New', monospace;
+      background: #f0f0ec;
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    pre {
+      background: #1a1a1a;
+      color: #f5f5f0;
+      padding: 1.5rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .modes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .mode-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1.2rem;
+    }
+    .mode-card .mode-id {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      color: #666;
+      margin-bottom: 0.3rem;
+    }
+    .mode-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    .mode-card .category {
+      display: inline-block;
+      background: #f0f0ec;
+      color: #555;
+      font-size: 0.75em;
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
+      font-family: 'Courier New', monospace;
+    }
+    .mode-card p {
+      font-size: 0.9rem;
+      color: #444;
+      margin: 0;
+    }
+    .disclaimer-box {
+      background: #fff8e6;
+      border-left: 4px solid #c8960c;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .disclaimer-box p { margin: 0; font-size: 0.95rem; }
+    .install-block {
+      background: #1a1a1a;
+      color: #f5f5f0;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+    .flags-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .flags-table th {
+      background: #1a1a1a;
+      color: white;
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+    }
+    .flags-table td {
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+    .flags-table tr:hover td { background: #f5f5f0; }
+    .flags-table td:first-child {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+    }
+    footer {
+      background: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a { color: #aaa; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .modes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>OpinionForge</h1>
+  <p class="tagline">An editorial craft engine for opinion writing with precise rhetorical control</p>
+</header>
+
+<div class="container">
+
+  <section id="what-it-is">
+    <h2>What It Is</h2>
+    <p>OpinionForge is an AI-powered editorial craft engine for generating publication-ready opinion pieces — op-eds, columns, and long-form opinion content. It is built around 12 distinct <strong>rhetorical modes</strong> that define argumentative approach, prose style, and rhetorical devices.</p>
+    <p>OpinionForge gives you three independent controls over how your piece is written:</p>
+    <ul>
+      <li><strong>Mode</strong> — the rhetorical approach (e.g., polemical, analytical, satirical)</li>
+      <li><strong>Stance</strong> — argumentative emphasis direction from -100 (equity-focused) to +100 (liberty-focused)</li>
+      <li><strong>Intensity</strong> — rhetorical heat from 0.0 (measured) to 1.0 (maximum conviction)</li>
+    </ul>
+    <p>This is a tool for improving your own rhetoric — not for imitating anyone else's. Choose a mode based on what the argument demands, not who you want to sound like.</p>
+  </section>
+
+  <section id="install">
+    <h2>Installation</h2>
+    <div class="install-block">pip install opinionforge</div>
+    <p>Requires Python 3.11+. Configure your API key before using:</p>
+    <pre>export ANTHROPIC_API_KEY=your-key-here
+# or for OpenAI:
+export OPENAI_API_KEY=your-key-here
+export OPINIONFORGE_LLM_PROVIDER=openai</pre>
+  </section>
+
+  <section id="quick-start">
+    <h2>Quick Start</h2>
+    <pre># Generate with a specific rhetorical mode
+opinionforge write "The rise of algorithmic governance" \
+  --mode polemical \
+  --no-preview
+
+# Choose stance and intensity
+opinionforge write "Climate policy tradeoffs" \
+  --mode analytical \
+  --stance -20 \
+  --intensity 0.4
+
+# Blend two modes
+opinionforge write "Technology regulation" \
+  --mode satirical:60,forensic:40 \
+  --no-preview
+
+# Export to Substack format
+opinionforge write "The attention economy" \
+  --mode analytical \
+  --export substack \
+  --no-preview</pre>
+  </section>
+
+  <section id="modes">
+    <h2>The 12 Rhetorical Modes</h2>
+    <p>Each mode is a self-contained rhetorical system with its own prose patterns, argument structure, and signature devices. Use <code>opinionforge modes --detail &lt;mode-id&gt;</code> for full details on any mode.</p>
+
+    <h3>Confrontational</h3>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-id">--mode polemical</div>
+        <h3>Polemical</h3>
+        <span class="category">confrontational</span>
+        <p>Combative moral urgency. Names targets, indicts positions as contemptible, demands the reader choose sides.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode populist</div>
+        <h3>Populist</h3>
+        <span class="category">confrontational</span>
+        <p>Plain-spoken, us-versus-them. Amplifies ordinary voices against remote, impersonal power.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode provocative</div>
+        <h3>Provocative</h3>
+        <span class="category">confrontational</span>
+        <p>Deliberately unsettling. States unfashionable truths and forces readers to face uncomfortable implications.</p>
+      </div>
+    </div>
+
+    <h3>Investigative</h3>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-id">--mode forensic</div>
+        <h3>Forensic</h3>
+        <span class="category">investigative</span>
+        <p>Evidence-first. Assembles documentary proof, follows the money, builds a prosecutorial case from primary sources.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode data_driven</div>
+        <h3>Data-Driven</h3>
+        <span class="category">investigative</span>
+        <p>Quantitative. Leads with numbers, visualizes trends, anchors every claim in empirical precision.</p>
+      </div>
+    </div>
+
+    <h3>Deliberative</h3>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-id">--mode analytical</div>
+        <h3>Analytical</h3>
+        <span class="category">deliberative</span>
+        <p>Rigorous, evidence-first. Breaks complex issues into parts, weighs explanations, arrives at measured conclusions.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode dialectical</div>
+        <h3>Dialectical</h3>
+        <span class="category">deliberative</span>
+        <p>Thesis-antithesis-synthesis. Takes opposing arguments seriously and arrives at positions through genuine engagement.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode measured</div>
+        <h3>Measured</h3>
+        <span class="category">deliberative</span>
+        <p>Calm, earned authority. Conveys confidence through restraint and precision. Claims only what the evidence warrants.</p>
+      </div>
+    </div>
+
+    <h3>Literary</h3>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-id">--mode satirical</div>
+        <h3>Satirical</h3>
+        <span class="category">literary</span>
+        <p>Irony, exaggeration, comic incongruity. The argument is made by letting the target's logic destroy itself.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode oratorical</div>
+        <h3>Oratorical</h3>
+        <span class="category">literary</span>
+        <p>Grand, elevated. Deploys the full arsenal of classical rhetoric — anaphora, periodic sentences, tricolon.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode narrative</div>
+        <h3>Narrative</h3>
+        <span class="category">literary</span>
+        <p>Story-first. Uses scene, character, and testimony to make abstract arguments vivid and emotionally resonant.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-id">--mode aphoristic</div>
+        <h3>Aphoristic</h3>
+        <span class="category">literary</span>
+        <p>Compressed, epigrammatic. Delivers argument through maxims and paradoxes. Every word carries maximum weight.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="controls">
+    <h2>Controls: --mode, --stance, --intensity</h2>
+    <p>OpinionForge separates <em>what rhetorical approach to use</em> from <em>how to position the argument</em> and <em>how forcefully to argue it</em>:</p>
+
+    <table class="flags-table">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Range</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>--mode</td>
+          <td>mode ID or blend</td>
+          <td>analytical</td>
+          <td>Rhetorical approach. Single mode or colon-separated blend (e.g., <code>polemical:60,analytical:40</code>)</td>
+        </tr>
+        <tr>
+          <td>--stance</td>
+          <td>-100 to +100</td>
+          <td>0</td>
+          <td>Argumentative emphasis: -100 (equity-focused) to +100 (liberty-focused). 0 = balanced</td>
+        </tr>
+        <tr>
+          <td>--intensity</td>
+          <td>0.0 to 1.0</td>
+          <td>0.5</td>
+          <td>Rhetorical heat: 0.0 = measured and deliberative, 1.0 = maximum conviction</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <pre>opinionforge write "Immigration and labor markets" \
+  --mode forensic \
+  --stance -40 \
+  --intensity 0.7 \
+  --no-preview</pre>
+  </section>
+
+  <section id="export">
+    <h2>Export Formats</h2>
+    <p>Use the <code>--export</code> flag to produce platform-optimized output:</p>
+    <ul>
+      <li><code>--export substack</code> — Clean ATX markdown, no HTML tags</li>
+      <li><code>--export medium</code> — Medium-style markdown with DROP CAP and story formatting</li>
+      <li><code>--export wordpress</code> — Gutenberg block markup for direct paste</li>
+      <li><code>--export twitter</code> — Numbered tweet thread with 280-character limits</li>
+    </ul>
+    <pre>opinionforge write "The state of journalism" \
+  --mode oratorical \
+  --export substack \
+  --no-preview</pre>
+  </section>
+
+  <section id="disclaimer-policy">
+    <h2>Disclaimer Policy</h2>
+    <p>Every piece generated by OpinionForge includes a mandatory disclaimer that cannot be suppressed:</p>
+    <div class="disclaimer-box">
+      <p><em>This piece was generated with AI-assisted rhetorical controls. It is original content and is not written by, endorsed by, or affiliated with any real person.</em></p>
+    </div>
+    <p>This policy exists because OpinionForge generates original AI content with a defined rhetorical character. The disclaimer ensures readers understand what they are reading. It is not negotiable.</p>
+  </section>
+
+  <section id="docs">
+    <h2>Documentation</h2>
+    <ul>
+      <li><a href="MODES.md">Full Mode Catalog (docs/MODES.md)</a> — Detailed descriptions, rhetorical devices, and prose patterns for all 12 modes</li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <p>OpinionForge v1.0.0 — An editorial craft engine for AI-assisted opinion writing.</p>
+  <p style="margin-top: 0.5rem;">Released under the MIT License.</p>
+</footer>
+
+</body>
+</html>

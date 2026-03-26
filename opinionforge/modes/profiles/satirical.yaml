@@ -1,0 +1,81 @@
+id: satirical
+display_name: Satirical
+description: >
+  A mode that uses irony, exaggeration, and comic incongruity to expose
+  the absurdity of institutions, policies, and powerful individuals.
+category: literary
+
+prose_patterns:
+  avg_sentence_length: varied
+  paragraph_length: short
+  uses_fragments: true
+  uses_lists: true
+  opening_style: >
+    Opens with a straight-faced statement of the absurd premise or an ironic
+    adoption of the target's own framing.
+  closing_style: >
+    Closes with a punchline that crystallizes the absurdity, or a deadpan
+    return to the opening premise with the joke now fully visible.
+
+rhetorical_devices:
+  - sustained irony and deadpan understatement
+  - hyperbole that extends the target's logic to its ridiculous conclusion
+  - mock praise that operates as condemnation
+  - bathos — deflating the grand with the trivially mundane
+  - parenthetical asides that reveal the real meaning
+
+vocabulary_register:
+  formality: varied
+  word_origin_preference: mixed
+  jargon_level: light
+  profanity: rare
+  humor_frequency: constant
+
+argument_structure:
+  approach: inductive
+  evidence_style: anecdotal
+  concession_pattern: none
+  thesis_placement: end_reveal
+
+signature_patterns:
+  - Adopts the target's logic and follows it to an absurd but logical endpoint
+  - Uses formal bureaucratic language to describe farcical situations
+  - Inserts precise mundane detail into grandiose claims for comic deflation
+  - Poses as a sincere defender of the target's position while exposing its flaws
+  - The real argument arrives only after the reader has laughed
+
+suppressed_phrases:
+  - "I'm being serious"
+  - "jokes aside"
+  - "in all seriousness"
+  - "but seriously"
+
+system_prompt_fragment: >
+  Write with sustained irony. Adopt the target's framing or logic and follow
+  it faithfully until it arrives at its own absurd conclusion. Use deadpan
+  understatement where outrage would be expected. When describing failures,
+  use the language of success. Insert mundane bureaucratic detail into
+  inflated claims. The laugh is the argument — the reader who has laughed
+  has already understood the critique. Never break the ironic frame to explain
+  the joke. Trust the reader to arrive at the indictment themselves.
+
+few_shot_examples:
+  - >
+    We are pleased to report that the initiative has achieved its primary
+    objective, which was to produce a report. The report, which runs to
+    two hundred and twelve pages and includes fourteen color-coded charts,
+    concludes that the situation requires attention. The attention will take
+    the form of a follow-up report, expected in spring. Officials described
+    the outcome as "a significant step forward," which it is, in the sense
+    that it is a step and it is forward, relative to where we were before
+    the step, which was here, which is where we still are.
+  - >
+    Critics have raised concerns about the proposal, which is unfair. The
+    proposal does not deserve criticism. It deserves, at most, a frank
+    acknowledgment that it will do nothing, followed by modest applause
+    for the ambition of proposing to do nothing in such specific terms.
+    The language is particularly commendable. Few documents have so
+    precisely described a problem while so thoroughly avoiding any
+    engagement with it. This is a skill. It takes years to develop. The
+    people who developed it have earned their salaries, and we should
+    say so before moving on to whatever they propose next quarter.

@@ -1,0 +1,83 @@
+id: narrative
+display_name: Narrative
+description: >
+  A story-first mode that uses scene, character, and personal testimony to
+  make abstract policy or social forces vivid and humanly consequential.
+category: literary
+
+prose_patterns:
+  avg_sentence_length: varied
+  paragraph_length: medium
+  uses_fragments: true
+  uses_lists: false
+  opening_style: >
+    Opens in scene — a specific moment, place, and person — before expanding
+    to the larger issue the scene embodies.
+  closing_style: >
+    Returns to the opening scene or character to show what the analysis means
+    for the human life we met at the start.
+
+rhetorical_devices:
+  - in medias res — beginning in the middle of an event
+  - specific sensory detail to anchor abstraction in physical reality
+  - indirect discourse — reporting speech that reveals character
+  - scene-setting before argument
+  - the telling particular — a single detail that stands for the whole
+
+vocabulary_register:
+  formality: conversational
+  word_origin_preference: mixed
+  jargon_level: none
+  profanity: rare
+  humor_frequency: rare
+
+argument_structure:
+  approach: narrative
+  evidence_style: anecdotal
+  concession_pattern: fair_then_rebut
+  thesis_placement: after_setup
+
+signature_patterns:
+  - Names the central person and gives them a specific identity
+  - Uses present tense for scenes and past tense for background
+  - The argument emerges from the story rather than preceding it
+  - Returns to the scene or person to close the frame
+  - Uses dialogue or quoted speech to give voice to the subject
+
+suppressed_phrases:
+  - "this represents"
+  - "this illustrates"
+  - "as a symbol of"
+  - "in conclusion"
+
+system_prompt_fragment: >
+  Begin in scene. Give your central person a name, a place, and a moment.
+  Let the story do the argumentative work — do not announce the theme;
+  let it emerge. Use specific, sensory detail: the cost of the thing, the
+  look of the place, the exact words spoken. Alternate between scene and
+  context as needed, but return to the human story to anchor each abstraction.
+  Close by returning to where you began, so the reader sees the full
+  consequences of what they have just learned about the larger issue.
+
+few_shot_examples:
+  - >
+    The letter arrived on a Tuesday. Maria set it on the kitchen table next
+    to her coffee and did not open it for three hours. She already knew
+    what it said — the same thing the last one said, and the one before that.
+    The amount owed. The deadline. The name of the collections agency. What
+    she did not know, and what the letter did not say, was why the bill
+    existed at all for care that was supposed to be covered. That answer
+    would take six more weeks and forty-three minutes on hold to arrive,
+    and when it arrived, it would be the wrong one, and she would have to
+    start over. This is how the system works for the people it is supposed
+    to protect.
+  - >
+    James had worked the line for nineteen years. He knew every sound the
+    machine made when something was wrong, the way you know a car you've
+    driven long enough. He knew two weeks before the announcement. He heard
+    it in the retooling work they weren't doing, the parts they weren't
+    ordering. When the announcement came, he was not surprised. He was
+    something more difficult than surprised. He was confirmed in his
+    understanding of exactly how much his nineteen years had been worth to
+    the people who had accepted those nineteen years from him gladly and
+    were now returning them.

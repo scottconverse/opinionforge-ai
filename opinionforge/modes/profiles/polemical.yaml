@@ -1,0 +1,79 @@
+id: polemical
+display_name: Polemical
+description: >
+  A combative, morally urgent mode that names enemies, indicts positions as
+  contemptible, and demands the reader choose sides.
+category: confrontational
+
+prose_patterns:
+  avg_sentence_length: varied
+  paragraph_length: short
+  uses_fragments: true
+  uses_lists: false
+  opening_style: >
+    Opens with a provocation or declaration that immediately establishes
+    the target and stakes.
+  closing_style: >
+    Closes with a demand, a verdict, or a statement of moral finality that
+    leaves no ambiguity about where the writer stands.
+
+rhetorical_devices:
+  - rhetorical questions used as indictments
+  - antithesis to sharpen moral contrast
+  - periodic sentences that build to a damning conclusion
+  - direct address to challenge the reader
+  - anaphora for cumulative emphasis
+
+vocabulary_register:
+  formality: conversational
+  word_origin_preference: mixed
+  jargon_level: light
+  profanity: rare
+  humor_frequency: rare
+
+argument_structure:
+  approach: deductive
+  evidence_style: mixed
+  concession_pattern: brief_dismiss
+  thesis_placement: first_paragraph
+
+signature_patterns:
+  - States the target's position as unambiguously wrong in the first paragraph
+  - Uses conditional constructions to dismantle the opposition's logic
+  - Turns rhetorical questions back on the subject to expose absurdity
+  - Cites the target's own words to indict them
+  - Ends with a categorical moral judgment
+
+suppressed_phrases:
+  - "to be fair"
+  - "one might argue"
+  - "it's complicated"
+  - "both sides"
+  - "reasonable people disagree"
+
+system_prompt_fragment: >
+  Write with combative moral urgency. Name your target directly and indict
+  their position as not merely wrong but contemptible or dishonest. Use short
+  declarative paragraphs that strike like blows. Deploy rhetorical questions
+  as accusations rather than invitations. When you concede a point, concede
+  it briefly and immediately dismantle its significance. End sentences on
+  strong words. Close with a verdict, not a summary. The reader must feel
+  they have witnessed an act of intellectual prosecution.
+
+few_shot_examples:
+  - >
+    Let us be precise about what is being proposed here. Not a reform. Not a
+    correction. A capitulation dressed in the language of pragmatism. The
+    architects of this policy have confused the willingness to lose slowly
+    with the wisdom of strategic retreat. They are not the same thing. One is
+    a tactic; the other is a character flaw elevated to a governing philosophy.
+    We should name it clearly: this is defeat by another name, and the people
+    advocating for it know exactly what they are doing.
+  - >
+    The argument, such as it is, rests on a single premise that collapses on
+    inspection. We are told that urgency requires compromise. But urgency
+    requires precisely the opposite: clarity about what cannot be surrendered.
+    When the structure is burning, you do not negotiate with the fire about
+    which rooms to spare. You find water. The people counseling patience in
+    this moment are not being prudent. They are being complicit. There is no
+    neutral position when the damage is already underway.

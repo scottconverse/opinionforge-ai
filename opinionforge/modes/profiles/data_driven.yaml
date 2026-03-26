@@ -1,0 +1,85 @@
+id: data_driven
+display_name: Data-Driven
+description: >
+  A quantitative mode that leads with numbers, visualizes trends, and uses
+  statistical evidence as the primary instrument of argument.
+category: investigative
+
+prose_patterns:
+  avg_sentence_length: medium
+  paragraph_length: short
+  uses_fragments: false
+  uses_lists: true
+  opening_style: >
+    Opens with a striking statistic or data point that immediately establishes
+    the empirical stakes of the argument.
+  closing_style: >
+    Closes with the policy or practical implication that the data demands,
+    stated as what the numbers require rather than what the writer prefers.
+
+rhetorical_devices:
+  - specific quantification rather than vague magnitude
+  - comparison to baseline or benchmark to establish significance
+  - trend description using precise time ranges
+  - translation of aggregate data into per-person or per-household terms
+  - the data anomaly — a number that should not be what it is
+
+vocabulary_register:
+  formality: formal
+  word_origin_preference: mixed
+  jargon_level: moderate
+  profanity: never
+  humor_frequency: never
+
+argument_structure:
+  approach: inductive
+  evidence_style: data_heavy
+  concession_pattern: fair_then_rebut
+  thesis_placement: first_paragraph
+
+signature_patterns:
+  - States numbers with their source and time period
+  - Uses comparative framing — "compared to," "relative to," "as a share of"
+  - Notes when data is incomplete or subject to revision
+  - Translates percentages into absolute counts and vice versa
+  - Ends with what the trend implies if it continues
+
+suppressed_phrases:
+  - "many people"
+  - "some experts"
+  - "a lot of"
+  - "significant number"
+
+system_prompt_fragment: >
+  Lead with a specific number. Not "many" or "most" or "a significant share"
+  — a number, with a source and a year. Build your argument by introducing
+  data points in logical sequence, each one either confirming or complicating
+  the previous. Translate aggregate statistics into human-scale terms when
+  they are more vivid that way. Note the source and vintage of each major
+  data point. When the data is contested or incomplete, say so. Let the
+  numbers drive the conclusion — the reader should feel the argument is
+  following the evidence, not the other way around.
+
+few_shot_examples:
+  - >
+    In 2023, the median household spent 8.9 percent of its pre-tax income
+    on health insurance premiums — up from 5.6 percent in 2010. That is
+    not a gradual drift. That is a structural shift, and it has happened
+    faster than wages have grown. Over the same period, median household
+    income rose 14 percent in real terms. Premium costs rose 34 percent.
+    The gap between those two numbers is where the pressure lives — in the
+    choices that families make when the math stops adding up. Every point of
+    premium growth above wage growth represents a transfer, and the
+    beneficiaries of that transfer are not the people paying the premiums.
+  - >
+    The three counties with the highest rates of uninsured residents share
+    two characteristics: they are in states that did not expand Medicaid,
+    and they have unemployment rates above the national median. This is not
+    a coincidence. It is the predicted output of a policy design. The
+    Congressional Budget Office estimated in 2022 that expansion would
+    reduce the uninsured rate in non-expansion states by 5.3 percentage
+    points. Applied to the current population of those states, that is
+    approximately 3.1 million people. Each year of non-expansion is another
+    year of that gap, compounding in emergency room visits, deferred
+    treatment, and the downstream costs that the health system eventually
+    absorbs anyway, from other pockets.

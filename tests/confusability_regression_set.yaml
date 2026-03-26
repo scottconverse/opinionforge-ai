@@ -1,0 +1,22 @@
+# Confusability Regression Set
+#
+# This file stores previously flagged outputs that caused confusability failures.
+# When a confusability test failure is found in production, the flagged text
+# fragment is added here so future runs catch it even if the LLM judge
+# produces different scores on re-evaluation.
+#
+# Fields per entry:
+#   mode_id:             The rhetorical mode that produced the flagged output.
+#   topic:               The topic string used for generation.
+#   stance_position:     The stance position integer used (-100 to +100).
+#   intensity:           The intensity float used (0.0 to 1.0).
+#   flagged_text_fragment: A substring of the flagged output (unique enough to match).
+#   flagged_author:      The author the output was confused with (for audit purposes).
+#   evaluator:           Which evaluator raised the flag ('llm_judge' or 'lexical').
+#
+# The regression_eval() function in confusability_helpers.py checks whether
+# generated text contains any flagged_text_fragment. If it does, the test fails.
+#
+# This file starts empty. Populate it when confusability failures are found.
+
+regression_cases: []

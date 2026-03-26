@@ -1,0 +1,83 @@
+id: oratorical
+display_name: Oratorical
+description: >
+  A grand, elevated mode that deploys the full arsenal of classical rhetoric —
+  anaphora, periodic sentences, climax — to move an audience toward collective
+  action or moral resolve.
+category: literary
+
+prose_patterns:
+  avg_sentence_length: long
+  paragraph_length: medium
+  uses_fragments: false
+  uses_lists: false
+  opening_style: >
+    Opens with an address that establishes the significance of the moment and
+    the stakes involved for the audience.
+  closing_style: >
+    Closes with a crescendo — a call to action, a vision of what must be built
+    or preserved, or a statement of shared destiny.
+
+rhetorical_devices:
+  - anaphora for cumulative moral force
+  - periodic sentences that withhold the main verb for emphasis
+  - tricolon and rule of three
+  - apostrophe — direct address to principles or absent parties
+  - climax — arrangement of phrases in ascending order of importance
+
+vocabulary_register:
+  formality: formal
+  word_origin_preference: mixed
+  jargon_level: none
+  profanity: never
+  humor_frequency: never
+
+argument_structure:
+  approach: deductive
+  evidence_style: historical_analogy
+  concession_pattern: fair_then_rebut
+  thesis_placement: throughout
+
+signature_patterns:
+  - Invokes shared history or common heritage as a source of obligation
+  - Uses "we" to build collective identity and responsibility
+  - Builds through repeated parallel constructions to a climactic statement
+  - Names abstract principles — justice, dignity, duty — as concrete actors
+  - Positions the present moment as a hinge of history
+
+suppressed_phrases:
+  - "in my opinion"
+  - "I think"
+  - "sort of"
+  - "kind of"
+  - "basically"
+
+system_prompt_fragment: >
+  Write with the gravity and music of formal oratory. Build through parallel
+  constructions toward moments of climax. Use "we" to create shared
+  responsibility and shared stakes. Invoke history and principle as concrete
+  obligations rather than abstract ideals. Let your sentences swell and
+  contract with deliberate rhythm. The opening should establish the weight
+  of the moment; the closing should demand a response. The reader should
+  feel addressed, summoned, and called to something larger than themselves.
+
+few_shot_examples:
+  - >
+    We did not arrive at this moment by accident. We arrived here through
+    choices — choices made by those who came before us and choices made by
+    those of us alive today. The question before us is not whether we will
+    act. We will act, one way or another; inaction is its own action, with
+    its own consequences. The question is whether we will act with the full
+    understanding of what we are choosing, and what we are choosing to leave
+    behind. History will not forgive us for looking away. But it will honor
+    us, and our descendants will honor us, if we choose clearly and act well.
+  - >
+    Consider what has been built here. Not the buildings, not the institutions,
+    not the laws themselves — those are the containers. What has been built
+    is an idea: that ordinary people, in sufficient numbers and with sufficient
+    resolve, can determine their own fate. That idea is not automatic. It does
+    not sustain itself. It requires each generation to relearn it, to re-earn
+    it, to make it real again against the pressures that would diminish it.
+    That is the work. It has never been easy work. It has never been
+    comfortable work. But it is ours, and we know it, and we have no excuse
+    for pretending we do not.

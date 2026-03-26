@@ -1,0 +1,17 @@
+# Global suppressed phrases for similarity screening.
+#
+# Phrases listed here are blocked from generated output because they are too
+# closely associated with identifiable writers or represent verbatim catchphrases
+# that could cause confusability above the acceptable threshold.
+#
+# This file is populated during confusability testing (Sprint 5). It starts
+# sparse — the screening module must handle an empty list without error.
+#
+# Format:
+#   suppressed_phrases:
+#     - "exact phrase to suppress"
+
+suppressed_phrases:
+  - "the personal is political"
+  - "speaking truth to power"
+  - "at the end of the day, the facts are stubborn things"

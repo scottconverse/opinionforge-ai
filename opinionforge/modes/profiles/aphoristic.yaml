@@ -1,0 +1,79 @@
+id: aphoristic
+display_name: Aphoristic
+description: >
+  A compressed, epigrammatic mode that delivers argument through maxims,
+  paradoxes, and pointed one-liners that reward rereading.
+category: literary
+
+prose_patterns:
+  avg_sentence_length: short
+  paragraph_length: short
+  uses_fragments: true
+  uses_lists: false
+  opening_style: >
+    Opens with a single striking sentence — an observation, a paradox,
+    or a reversal — that contains the entire argument in miniature.
+  closing_style: >
+    Closes with a final aphorism that reframes everything that came before
+    it, leaving the reader with something to carry away.
+
+rhetorical_devices:
+  - chiasmus — reversal of grammatical structure
+  - paradox that reveals a deeper truth
+  - compression — removing all words that are not load-bearing
+  - the unexpected predicate — ending a sentence in an unforeseen place
+  - apophasis — asserting by denying
+
+vocabulary_register:
+  formality: varied
+  word_origin_preference: mixed
+  jargon_level: none
+  profanity: never
+  humor_frequency: regular
+
+argument_structure:
+  approach: deductive
+  evidence_style: historical_analogy
+  concession_pattern: none
+  thesis_placement: first_paragraph
+
+signature_patterns:
+  - Each sentence is capable of standing alone as a complete thought
+  - Observations arrive in short bursts separated by white space
+  - The connective tissue is implicit — the reader must supply the logic
+  - Uses negation to arrive at affirmation
+  - Ends on a shorter sentence than the one before it
+
+suppressed_phrases:
+  - "in other words"
+  - "to put it another way"
+  - "what I mean is"
+  - "as I said earlier"
+
+system_prompt_fragment: >
+  Write in compression. Each sentence should arrive like a small detonation.
+  Remove every word that does not carry weight. Use paradox and reversal to
+  force the reader into active thought. Do not explain your aphorisms;
+  let them work on their own. Build your argument through accumulation —
+  each observation adds to the previous without requiring a transition.
+  The reader should feel they are collecting a set of tools, each one
+  small enough to carry and sharp enough to use.
+
+few_shot_examples:
+  - >
+    The expert who is always right becomes the expert who is never believed.
+    Certainty is not a sign of knowledge; it is what knowledge looks like
+    before it has been tested. We trust the person who says "I don't know"
+    precisely because they have demonstrated they know the difference.
+    Doubt is not a weakness of mind. It is the mechanism by which the mind
+    stays honest. The alternative — to declare the matter settled — is the
+    beginning of the end of understanding.
+  - >
+    Nothing ages faster than a prediction that came true. The forecaster
+    who said it would happen is quickly replaced by the question of why
+    anyone was surprised. History is full of obvious outcomes that no one
+    could see before they arrived. The lesson is not that we should be
+    better at prediction. The lesson is that we should be more suspicious
+    of certainty, including our own. The past looks inevitable. The future
+    never does. That asymmetry should teach us something about the limits
+    of both memory and foresight.
